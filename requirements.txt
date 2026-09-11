@@ -1,0 +1,6 @@
+# No external Python packages are required.
+# This tool only uses Python's standard library and calls FFmpeg/FFprobe
+# directly via subprocess.
+#
+# You DO need FFmpeg installed and available on your system PATH.
+# See README.md for Windows installation instructions.
