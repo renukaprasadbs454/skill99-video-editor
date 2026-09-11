@@ -1,0 +1,68 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# ─── Virtual environments ─────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ─── OS / editor noise ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# ─── Logs & temp files ────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VIDEO / MEDIA FILES — ignore everything except the one sample kept for guidance
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Ignore ALL videos inside input/ ...
+input/**/*.mp4
+input/**/*.mov
+input/**/*.mkv
+input/**/*.avi
+input/**/*.webm
+input/**/*.flv
+input/**/*.wmv
+
+# ... EXCEPT the sample guidance video
+!input/data analytics - 1.mp4
+
+# Ignore ALL videos inside output/ ...
+output/**/*.mp4
+output/**/*.mov
+output/**/*.mkv
+output/**/*.avi
+output/**/*.webm
+output/**/*.flv
+output/**/*.wmv
+
+# ... EXCEPT the sample processed output kept for reference
+!output/data analytics - 1.mp4
+
+# Ignore ALL images inside logo/ ...
+logo/**/*.png
+logo/**/*.jpg
+logo/**/*.jpeg
+logo/**/*.svg
+logo/**/*.webp
+
+# ... EXCEPT the project logo
+!logo/logo.png

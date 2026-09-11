@@ -142,16 +142,40 @@ change was needed for this script to work correctly with it as-is.
 ```
 video-processor/
 ├── input/                 ← source videos (never modified)
+│   └── data analytics - 1.mp4   ← sample video (tracked for guidance)
 ├── output/                ← processed videos land here
+│   └── data analytics - 1.mp4   ← sample output (tracked for reference)
 ├── logo/
-│   └── logo.png
+│   └── logo.png           ← watermark logo (tracked)
 ├── process_videos.py      ← the script — all config at the top
 ├── requirements.txt
 ├── run.bat                ← double-click to run on Windows
 └── README.md
 ```
 
-## 6. Troubleshooting
+---
+
+## 6. Git tracking policy
+
+This repo intentionally **keeps** a few sample files tracked so new contributors
+can see a before/after example without running the tool first:
+
+| Path | Status | Reason |
+|---|---|---|
+| `input/data analytics - 1.mp4` | ✅ tracked | Sample source video for guidance |
+| `output/data analytics - 1.mp4` | ✅ tracked | Sample processed output for reference |
+| `logo/logo.png` | ✅ tracked | Watermark logo used by the script |
+| Any other file in `input/` | 🚫 ignored | Your private videos — not committed |
+| Any other file in `output/` | 🚫 ignored | Generated outputs — not committed |
+| Any other image in `logo/` | 🚫 ignored | Alternative logos — not committed |
+
+> **Why?** Large binary files bloat git history quickly. Only the minimal
+> sample set needed to demonstrate and test the workflow is committed.
+> Everything else you drop into `input/` or `output/` will stay local.
+
+---
+
+## 7. Troubleshooting
 
 - **"ffmpeg/ffprobe not found"** — see the installation section above.
 - **A specific file fails** — the console prints the last 30 lines of
